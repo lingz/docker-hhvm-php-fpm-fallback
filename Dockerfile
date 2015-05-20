@@ -40,6 +40,10 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 # HHVM config
 RUN sed -i -e"s/9000/8000/" /etc/hhvm/server.ini /etc/nginx/hhvm.conf
 
+# Start the custom run script (fixes hanging bug)
+ADD ./my_init /my_init
+RUN chmod 755 /my_init
+
 # private expose
 EXPOSE 80
 

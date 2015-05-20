@@ -4,6 +4,10 @@ This has no php files in it, so you need to load the relevant php code into `/us
 
 ##How to use
 
+To build this container
+
+    ./build.sh
+
 To start the server just use
 
     ./start.sh
